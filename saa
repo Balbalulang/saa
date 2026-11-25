@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Skate Shop — skateboards, parts, apparel and street culture.">
+  <title>Skate Shop | Ride Your Way</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container-fluid header-inner">
+      <a class="profile-link" href="#contact" aria-label="Profile and contact">
+        <img src="assets/profile.jpg" alt="Skate Shop profile avatar">
+      </a>
+      <button class="mobile-menu btn" id="menuToggle" aria-label="Toggle navigation"><i class="bi bi-list"></i></button>
+      <nav class="main-nav" id="mainNav">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#categories">Us</a>
+        <a href="#products">Product</a><a href="#contact">Contact</a>
+      </nav>
+      <form class="search-box" id="searchForm" role="search">
+        <i class="bi bi-search"></i>
+        <input id="searchInput" type="search" placeholder="Search products..." aria-label="Search products">
+        <button type="submit" aria-label="Submit search"><i class="bi bi-arrow-right"></i></button>
+      </form>
+      <button class="cart-button" id="cartButton" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartPanel" aria-label="Open shopping cart">
+        <i class="bi bi-bag"></i><span>Cart</span><b id="cartCount">0</b>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section" id="home">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-5 text-center hero-brand">
+            <img class="main-logo" src="assets/logo.jpg" alt="Skate Shop logo">
+            <p class="eyebrow mt-3 mb-1">Skate Shop</p>
+            <p class="hero-tagline">Skate every day. Keep rolling.</p>
+          </div>
+          <div class="col-lg-7">
+            <div class="section-heading compact-heading">
+              <span class="section-kicker">Find your setup</span>
+              <h1>Gear up. <span>Roll out.</span></h1>
+              <p>Everything you need for your next session.</p>
+            </div>
+            <div class="category-carousel-wrap">
+              <button class="carousel-arrow prev" id="categoryPrev" aria-label="Scroll categories left"><i class="bi bi-chevron-left"></i></button>
+              <div class="category-carousel" id="categoryCarousel">
+                <a class="category-card" href="#products" data-category="Decks"><img src="assets/decks.jpg" alt="Skateboard decks"><span>Decks</span></a>
+                <a class="category-card" href="#products" data-category="Trucks"><img src="assets/trucks.jpg" alt="Skateboard trucks"><span>Trucks</span></a>
+                <a class="category-card" href="#products" data-category="Wheels"><img src="assets/wheels.jpg" alt="Skateboard wheels"><span>Wheels</span></a>
+                <a class="category-card" href="#products" data-category="Apparel"><img src="assets/apparel.jpg" alt="Skate apparel hoodie"><span>Apparel</span></a>
+              </div>
+              <button class="carousel-arrow next" id="categoryNext" aria-label="Scroll categories right"><i class="bi bi-chevron-right"></i></button>
+            </div>
+            <div class="text-center text-lg-end mt-3"><a class="btn btn-skate" href="#products">Shop now <i class="bi bi-arrow-up-right"></i></a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section section-pad" id="about">
+      <div class="container">
+        <div class="row align-items-center g-4 g-lg-5">
+          <div class="col-lg-6">
+            <div class="about-image-frame"><img src="assets/shop-interior.jpg" alt="Inside the Skate Shop"></div>
+            <p class="image-caption">A place for every skater.</p>
+          </div>
+          <div class="col-lg-6">
+            <span class="section-kicker">Who we are</span>
+            <h2 class="section-title">About <span>the shop</span></h2>
+            <p>Welcome to Skate Shop, your home for skateboarding, street culture, and creativity.</p>
+            <p>We are passionate about providing skateboarders of all ages and skill levels with quality skateboards, wheels, trucks, apparel, accessories, and other essential gear. Whether you're a beginner learning your first tricks or an experienced skater looking to improve your setup, we're here to support your journey.</p>
+            <p>Our goal is to create a friendly and welcoming community where skateboarders can ride, learn, express themselves, and have fun. We believe skateboarding is more than just a sport—it is a lifestyle that encourages confidence, creativity, freedom and friendship.</p>
+            <a href="#contact" class="text-link">Get in touch <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="products-section section-pad" id="products">
+      <div class="container">
+        <div class="section-heading text-center">
+          <span class="section-kicker">Made for your next session</span>
+          <h2 class="section-title">Featured <span>products</span></h2>
+          <p>Skate essentials picked for the streets and the park.</p>
+        </div>
+        <div class="row g-4 justify-content-center" id="productGrid">
+          <div class="col-sm-10 col-md-6 col-lg-5 product-column" data-name="Darkstar Deck" data-category="Decks">
+            <article class="product-card">
+              <div class="product-image"><img src="assets/darkstar-deck.jpg" alt="Darkstar skateboard deck"></div>
+              <div class="product-info">
+                <div><span class="product-category">Decks</span><h3>Darkstar Deck</h3><p class="product-price">₱2,990.00</p></div>
+                <button class="btn btn-skate add-cart" data-id="darkstar" data-name="Darkstar Deck" data-price="2990"><i class="bi bi-bag-plus"></i> Add to cart</button>
+              </div>
+            </article>
+          </div>
+          <div class="col-sm-10 col-md-6 col-lg-5 product-column" data-name="Venture Trucks" data-category="Trucks">
+            <article class="product-card">
+              <div class="product-image"><img src="assets/venture-trucks.jpg" alt="Venture skateboard trucks"></div>
+              <div class="product-info">
+                <div><span class="product-category">Trucks</span><h3>Venture Trucks</h3><p class="product-price">₱2,450.00</p></div>
+                <button class="btn btn-skate add-cart" data-id="venture" data-name="Venture Trucks" data-price="2450"><i class="bi bi-bag-plus"></i> Add to cart</button>
+              </div>
+            </article>
+          </div>
+        </div>
+        <p class="empty-search d-none" id="emptySearch">No matching products found. Try another search.</p>
+      </div>
+    </section>
+
+    <section class="contact-section section-pad" id="contact">
+      <div class="container">
+        <div class="section-heading text-center">
+          <span class="section-kicker">Questions, ideas, or just saying hi?</span>
+          <h2 class="section-title">Contact <span>us</span></h2>
+        </div>
+        <div class="row g-5 align-items-center contact-content">
+          <div class="col-lg-5">
+            <div class="contact-item"><span class="contact-icon"><i class="bi bi-telephone-fill"></i></span><div><h3>Contact No.</h3><p>+63 9XX XXX XXXX</p></div></div>
+            <div class="contact-item"><span class="contact-icon"><i class="bi bi-envelope"></i></span><div><h3>Email Us!</h3><p>skateshop@example.com</p></div></div>
+            <a class="contact-item social-link" href="https://www.facebook.com/" target="_blank" rel="noopener"><span class="contact-icon"><i class="bi bi-facebook"></i></span><div><h3>Facebook</h3><p>Skate Shop</p></div></a>
+          </div>
+          <div class="col-lg-7">
+            <form id="contactForm" class="contact-form">
+              <label class="visually-hidden" for="contactName">Name</label>
+              <input id="contactName" name="name" class="form-control" placeholder="Name" required>
+              <label class="visually-hidden" for="contactEmail">Email address</label>
+              <input id="contactEmail" name="email" type="email" class="form-control" placeholder="Email Address" required>
+              <label class="visually-hidden" for="contactMessage">Message</label>
+              <textarea id="contactMessage" name="message" class="form-control" rows="5" placeholder="Message" required></textarea>
+              <button class="btn btn-skate w-100" type="submit">Send now <i class="bi bi-send"></i></button>
+              <p class="form-note">Demo form: messages are saved only in this browser.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container d-flex flex-column flex-md-row justify-content-between gap-2"><span>© <span id="year"></span> Skate Shop. Ride your way.</span><span>Built for the skate community <i class="bi bi-heart-fill"></i></span></div></footer>
+
+  <div class="offcanvas offcanvas-end cart-panel" tabindex="-1" id="cartPanel" aria-labelledby="cartTitle">
+    <div class="offcanvas-header"><h2 class="offcanvas-title" id="cartTitle">Your cart</h2><button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button></div>
+    <div class="offcanvas-body"><div id="cartItems" class="cart-items"><p class="cart-empty">Your cart is empty.</p></div><div class="cart-total"><span>Total</span><strong id="cartTotal">₱0.00</strong></div><button class="btn btn-skate w-100 mt-3" id="checkoutButton">Continue</button><p class="form-note mt-3">Demo cart only. No payment is processed.</p></div>
+  </div>
+  <div class="toast-container position-fixed bottom-0 end-0 p-3"><div id="siteToast" class="toast text-bg-dark border-0" role="status"><div class="d-flex"><div class="toast-body" id="toastMessage">Added to cart.</div><button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button></div></div></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
